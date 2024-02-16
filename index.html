@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELIPARC DZ</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <nav>
+		<a href="productPage.html" class="logo">RELIPARC.DZ</a>
+		<ul id="actions" >
+			<li><a href="">Accueil</a></li>
+			<li><a href="">A propos</a></li>
+			<li><a href="">Contact</a></li>
+			
+		</ul>
+    <button id="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+		<a id="test" href="productPage.html" class="logo">RELIPARC.DZ</a>
+	</nav>
+  <div class="titre">
+    <h1>Livraison aux points de relais:</h1>
+  </div>
+  
+  <div class="form">
+    
+  
+  <h3>Les informations sur la livraison: </h3>
+  <br>
+  <br>
+    <form method="post" action="" name="contact-form">
+  <label for="pays" >Choisir une wilaya:</label>
+  <select name="wilaya" id="pays" onchange="chargerWilayas()">
+    <option  value="">Sélectionnez une wilaya</option>
+  </select>  
+
+  <label for="wilayas">Choisir une commune:</label>
+  <select name="commune" id="wilayas" onchange="chargerCommunes()">
+    <option value="">Sélectionnez une commune</option>
+  </select>
+
+ <button id="afficherIframeBtn">Trouver</button>
+ </div>
+ 
+  
+ <br>
+ <br>
+ <br>
+
+  <div class="map" id="iframeContainer">
+    <h3>sélectionner une commune pour trouver les points de relais</h3>
+  </div>
+  <div class="form2">
+  <h3>Les informations personnelles: </h3>
+    <br>
+    <br>
+   
+    <label aria-required="true" for="nom">Nom :</label>
+    <input required id="nom" name="Nom" type="text" placeholder="Entrer votre nom">
+    <label for="Prénom">Prénom :</label>
+    <input id="prénom" name="Prenom" type="text" placeholder="Entrer votre prénom">
+   
+    <label for="Numéro">Numéro de téléphone :</label>
+    <input id="tel" name="nmr" type="tel" placeholder="Entrer votre numéro">
+     <br>
+     <br>
+
+
+     <label id="mail" for="e-mail"> E-mail :</label>
+    <input  name="e-mail" type="email" placeholder="Entrer votre e-mail">
+
+
+    <label for="communes">Choisir une point de relais:</label>
+  <select name="point" id="communes">
+    <option  value="">Sélectionnez une point de relais</option>
+  </select>
+  <br><br>
+  <a href="thankYouPage.html"><input type="submit" value="Confirmer la commande" id="submit"> </a>
+  
+  <!-- <button type="submit" id=""><a href="thankYouPage.html">Confirmer la commande</a></button> -->
+</form>
+ </div>
+  <section class="contact" id="contact">
+		<div class="main-contact">
+			<div class="contact-content">
+				<li><a href="#">Accueil</a></li>
+				
+				<li><a href="#">A propos</a></li>
+			    <li><a href="#">Contact</a></li>
+			</div>
+
+		
+
+			<div class="contact-content">
+				<li><a href="">Facebook</a></li>
+				<li><a href="">Tweeter</a></li>
+		    <li><a href="#">Tel: +213799880685</a></li>
+			</div>
+
+		</div>
+
+		<div class="action">
+			<form>
+				<input type="email" name="email" placeholder="Your Email" required>
+				<input type="submit" name="submit" value="Submit" required>
+			</form>
+		</div>
+	</section>
+
+  
+
+  <script src="index.js"> </script>
+</body>
+</html>
+<!-- <label for="wilaya">Choisir une wilaya :</label>
+  <select id="wilaya" onchange="chargerCommunes()">
+    <option value="wilaya0">- Choisir une wilaya -</option>
+    <option value="wilaya1">01-ADRAR</option>
+    <option value="wilaya2">02-CHLEF</option>
+    <option value="wilaya3">03-LAGHOUAT </option>
+    <option value="wilaya4">04-OUM EL BOUAGHI </option>
+    <option value="wilaya5">05-BATNA </option>
+    <option value="wilaya6">06-BEJAIA </option>
+    <option value="wilaya7">07-BISKRA </option>
+    <option value="wilaya8">08-BECHAR </option>
+    <option value="wilaya9">09-BLIDA </option>
+    <option value="wilaya10">10-BOUIRA </option>
+    <option value="wilaya11">11-TAMANRASSET </option>
+    <option value="wilaya12">12-TEBESSA </option>
+    <option value="wilaya13">13-TLEMCEN </option>
+    <option value="wilaya14">14-TIARET </option>
+    <option value="wilaya15">15-TIZI OUZOU </option>
+    <option value="wilaya16">16-ALGIER</option>
+    <option value="wilaya17">17-DJELFA </option>
+    <option value="wilaya18">18-JIJEL </option>
+    <option value="wilaya19">19-SETIF </option>
+    <option value="wilaya20">20-SAÏDA </option>
+    <option value="wilaya21">21-SKIKDA </option>
+    <option value="wilaya22">22-SIDI BEL ABBES </option>
+    <option value="wilaya23">23-ANNABA </option>
+    <option value="wilaya24">24-GUELMA </option>
+    <option value="wilaya25">25-CONSTANTINE </option>
+    <option value="wilaya26">26-MEDEA </option>
+    <option value="wilaya27">27-MOSTAGANEM </option>
+    <option value="wilaya28">28-MSILA </option>
+    <option value="wilaya29">29-MASCARA </option>
+    <option value="wilaya30">30-OUARGLA </option>
+    <option value="wilaya31">31-ORAN</option>
+    <option value="wilaya32">32-EL BAYADH</option>
+    <option value="wilaya33">33-ILLIZI</option>
+    <option value="wilaya34">34-BORDJ BOU ARRERIDJ</option>
+    <option value="wilaya35">35-BOUMERDES</option>
+    <option value="wilaya36">36-EL TARF</option>
+    <option value="wilaya37">37-TINDOUF</option>
+    <option value="wilaya38">38-TISSEMSILT</option>
+    <option value="wilaya39">39-EL OUED</option>
+    <option value="wilaya40">40-KHENCHELA</option>
+    <option value="wilaya41">41-SOUK AHRAS</option>
+    <option value="wilaya42">42-TIPAZA</option>
+    <option value="wilaya43">43-MILA</option>
+    <option value="wilaya44">44-AÏN DEFLA</option>
+    <option value="wilaya45">45-NAAMA</option>
+    <option value="wilaya46">46-AÏN TEMOUCHENT</option>
+    <option value="wilaya47">47-GHARDAIA</option>
+    <option value="wilaya48">48-RELIZANE</option>
+    <option value="wilaya49">49-TIMIMOUN</option>
+    <option value="wilaya50">50-BORDJ BADJI MOKHTAR</option>
+    <option value="wilaya51">51-OULED DJELLAL</option>
+    <option value="wilaya52">52-BÉNI ABBÈS</option>
+    <option value="wilaya53">53-IN SALAH</option>
+    <option value="wilaya54">54-IN GUEZZAM</option>
+    <option value="wilaya55">55-TOUGGOURT</option>
+    <option value="wilaya56">56-DJANET</option>
+    <option value="wilaya57">57-EL M’GHAIER</option>
+    <option value="wilaya58">58-EL MENIAA</option>
+  </select>
+
+  
+
+  <label for="commune">Choisir une commune :</label>
+  <select id="commune">
+    
+  </select>
+  <label for="point">Choisir une point de relais :</label>
+  <select id="point">
+    
+  </select> -->
